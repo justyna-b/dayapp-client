@@ -4,3 +4,21 @@
     width: 95%;
     border-radius: 10px;
 }
+
+.to-another {
+    padding: 3vh;
+    margin-top: 1.5vh;
+    border-radius: 100px;
+    border: none;
+}
+
+.home-text {
+    color: #444;
+    padding-top: 5%;
+}
+
+#title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 6vh;
+}

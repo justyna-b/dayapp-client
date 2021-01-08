@@ -44,7 +44,7 @@ class Info extends React.Component {
               
               <div>
               <a href={`/calendar/${this.state.city}`}>
-                <button>inny dzien</button>
+                <button className='to-another'>inny dzien</button>
                 </a>
               </div>
             </div>

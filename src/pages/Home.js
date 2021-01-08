@@ -31,11 +31,15 @@ class Home extends React.Component {
       <div className='App'>
         <header className='App-header'>
           <div className='cities-container'>
-            wybierz miasto
+           <div className='home-text' id='title'> wybierz miasto </div>
             <div className='wrapper'>
               {Object.keys(this.state.cities).map(city => (
                 <Button city={this.state.cities[city].en_name} />
               ))}
+            </div>
+            <div className='home-text'>
+              Przykro nam, API z którym współpracujemy nie wspiera póki co
+              pozostałych stolic Europy :(
             </div>
           </div>
         </header>
