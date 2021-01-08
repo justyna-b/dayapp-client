@@ -1,0 +1,29 @@
+.wrapper-info {
+  margin: 5%;
+  height: 75%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  gap: 10%;
+  color:#282C34;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+.box {
+  font-weight: bold;
+}
+
+#city {
+  font-size: 10vh;
+  text-transform: uppercase;
+}
+
+#img {
+  width: 90%;
+}
