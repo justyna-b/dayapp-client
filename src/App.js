@@ -16,7 +16,7 @@ class App extends React.Component {
             <Route exact path='/' component={Home} />
             <Route path='/home' component={Home} />
             <Route path='/info/:city' component={Info} />
-            <Route path='/another-info/:city' component={AnotherDayInfo} />
+            <Route path='/another-info/:city/:date' component={AnotherDayInfo} />
             <Route path='/calendar/:city' component={CalendarCustom} />
           </Switch>
         </BrowserRouter>
