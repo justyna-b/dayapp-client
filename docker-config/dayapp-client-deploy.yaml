@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: dayapp-client-deploy
+  name: dayapp-client-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dayapp-client-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: dayapp-client-deploy
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/labproj07/dayapp-client:6.2
+        name: dayapp-client
+        ports:
+        - containerPort: 3001
+        resources: {}
+        envFrom:
+        - configMapRef:
+            name: dayapp-client-configmapv3
+status: {}

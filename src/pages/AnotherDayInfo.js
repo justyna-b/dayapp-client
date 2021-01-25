@@ -15,7 +15,7 @@ class AnotherDayInfo extends React.Component {
   }
 
   async componentDidMount () {
-    fetch(`http://localhost:3000/info/${this.state.date}/${this.state.city}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/info/${this.state.date}/${this.state.city}`)
       .then(response => response.json())
       .then(res => {
         this.setState({

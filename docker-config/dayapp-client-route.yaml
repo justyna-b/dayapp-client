@@ -1,0 +1,31 @@
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2021-01-20T20:28:22Z"
+  labels:
+    app: dayapp-client-deploy
+  name: dayapp-client-route
+  namespace: labproj07
+  resourceVersion: "175855056"
+  selfLink: /apis/route.openshift.io/v1/namespaces/labproj07/routes/dayapp-client-route
+  uid: ae1844f4-b320-4aaf-a5b4-a24ebb912e51
+spec:
+  host: dayapp-client-route-labproj07.apps.cp4apps.cloudpak.site
+  port:
+    targetPort: 3001
+  to:
+    kind: Service
+    name: dayapp-client-svc
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2021-01-20T20:28:22Z"
+      status: "True"
+      type: Admitted
+    host: dayapp-client-route-labproj07.apps.cp4apps.cloudpak.site
+    routerCanonicalHostname: apps.cp4apps.cloudpak.site
+    routerName: default
+    wildcardPolicy: None

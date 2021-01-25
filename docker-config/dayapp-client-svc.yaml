@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-01-20T20:28:02Z"
+  labels:
+    app: dayapp-client-deploy
+  name: dayapp-client-svc
+  namespace: labproj07
+  resourceVersion: "175854801"
+  selfLink: /api/v1/namespaces/labproj07/services/dayapp-client-svc
+  uid: a6173342-3a67-41de-b435-dfe99cbe5cc9
+spec:
+  clusterIP: 172.30.9.208
+  ports:
+  - port: 3001
+    protocol: TCP
+    targetPort: 3001
+  selector:
+    app: dayapp-client-deploy
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

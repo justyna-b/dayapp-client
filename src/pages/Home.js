@@ -13,7 +13,7 @@ class Home extends React.Component {
   }
 
   async componentDidMount () {
-    fetch('http://localhost:3000/cities')
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/cities`)
       .then(response => response.json())
       .then(res => {
         this.setState({

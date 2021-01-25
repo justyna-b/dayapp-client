@@ -14,7 +14,7 @@ class Info extends React.Component {
   }
 
     async componentDidMount () {
-      fetch(`http://localhost:3000/info/today/${this.state.city}`)
+      fetch(`${process.env.REACT_APP_BACKEND_URL}/info/today/${this.state.city}`)
         .then(response => response.json())
         .then(res => {
           this.setState({
@@ -41,7 +41,6 @@ class Info extends React.Component {
               <div> <span className='label'> Złota godzina: </span>{this.state.info.goldenHour}</div>
               <div> <span className='label'> Długość dnia: </span>{this.state.info.dayLength}</div>
               <div> <span className='label'> Wilgotność: </span>{this.state.info.humidity}</div>
-              
               <div>
               <a href={`/calendar/${this.state.city}`}>
                 <button className='to-another'>inny dzien</button>
